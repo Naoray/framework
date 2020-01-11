@@ -1165,7 +1165,7 @@ class TestResponse implements ArrayAccess
     public function dumpErrors($errorBag = 'default')
     {
         if ($errors = $this->session()->get('errors')) {
-            dump($errors->getBag($errorBag));
+            dump($errors->getBag($errorBag)->getMessages());
         }
 
         return $this;
